@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
                 imc < 18.5 -> "Abaixo do peso"
                 imc < 25 -> "Peso normal"
                 imc < 30 -> "Sobrepeso"
-                imc < 35 -> "Obesidade I"
-                imc < 40 -> "Obesidade II"
-                else -> "Obesidade III"
+                imc < 35 -> "Obesidade grau I"
+                imc < 40 -> "Obesidade grau II"
+                else -> "Obesidade grau III"
             }
             tvClassResult.text = classificacao
         }
