@@ -7,12 +7,132 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="Nome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Idade"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvNome"
+        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
+
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Altura"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvNome"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdade" />
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Peso"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvNome"
+        app:layout_constraintTop_toBottomOf="@+id/tvAltura" />
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="IMC:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular" />
+
+    <TextView
+        android:id="@+id/tvClassificacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Classificação:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/tvIMCResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvIMCResult" />
+
+    <EditText
+        android:id="@+id/inputNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/tvNome"
+        app:layout_constraintStart_toEndOf="@+id/tvNome"
+        app:layout_constraintTop_toTopOf="@id/tvNome" />
+
+    <EditText
+        android:id="@+id/inputIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tvIdade"
+        app:layout_constraintStart_toStartOf="@+id/inputNome"
+        app:layout_constraintTop_toTopOf="@+id/tvIdade" />
+
+    <EditText
+        android:id="@+id/inputAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAltura"
+        app:layout_constraintStart_toStartOf="@+id/inputIdade"
+        app:layout_constraintTop_toTopOf="@+id/tvAltura" />
+
+    <EditText
+        android:id="@+id/inputPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPeso"
+        app:layout_constraintStart_toStartOf="@+id/inputAltura"
+        app:layout_constraintTop_toTopOf="@+id/tvPeso" />
+
+    <TextView
+        android:id="@+id/tvIMCResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/tvIMC"
+        app:layout_constraintTop_toBottomOf="@+id/tvIMC"
+        tools:text="35.2" />
+
+    <TextView
+        android:id="@+id/tvClassResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/tvClassificacao"
+        app:layout_constraintTop_toBottomOf="@+id/tvClassificacao"
+        tools:text="Obesidade II" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="@+id/inputPeso"
+        app:layout_constraintTop_toBottomOf="@+id/inputPeso" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
